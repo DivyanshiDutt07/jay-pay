@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="contactus.css">
+
+</head>
+
+<body>
+    <script>function showLoginPage() {
+            document.getElementById("register-page").classList.add("hidden");
+            document.getElementById("login-page").classList.remove("hidden");
+        }
+
+        function showRegisterPage() {
+            document.getElementById("login-page").classList.add("hidden");
+            document.getElementById("register-page").classList.remove("hidden");
+        }
+    </script>
+    <!-- Registration Page -->
+    <div class="container" id="register-page">
+        <h2>Register</h2>
+        <form>
+            <label>Enter your PAN</label>
+            <input type="text" placeholder="Pan Number" required>
+
+            <label>Enter your Aadhar</label>
+            <input type="text" placeholder="Aadhar Number" required>
+
+            <label>Enter your State</label>
+            <select required>
+                <option value="">Select Your State</option>
+                <!-- Add options here -->
+            </select>
+
+            <label>PIN (4 digit)</label>
+            <input type="password" maxlength="4" placeholder="****" required>
+
+            <label>Confirm PIN (4 digit)</label>
+            <input type="password" maxlength="4" placeholder="****" required>
+
+            <label>Create your Referral Code</label>
+            <input type="text" placeholder="Referral Code" required>
+
+            <label>Enter Agent Code (optional)</label>
+            <input type="text" placeholder="Agent Code (optional)">
+
+            <button type="submit">Sign up</button>
+            <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+        </form>
+    </div>
+
+    <!-- Login Page -->
+    <div class="container hidden" id="login-page">
+        <h2>Login</h2>
+        <form>
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number" required>
+
+            <label>PIN</label>
+            <input type="password" maxlength="4" placeholder="****" required>
+
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegisterPage()">Register</a></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

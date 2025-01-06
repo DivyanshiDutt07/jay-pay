@@ -1,0 +1,1146 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #f47920;   /* Blue */
+    --secondary-color: #f47920; /* Green */
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    color: #333;
+}
+
+.container {
+    align-items: center;
+    width: auto;
+    max-width: 1600px;
+    margin:  auto;
+    
+}
+
+/* Navbar */
+/* General Navbar Styles */
+.navbar {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* Bottom shadow only */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+#logoimage {
+    border-radius: 14px;
+    height: 90px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: #f47920;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.signup-button {
+    background-color: #f47920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Stack navbar items vertically */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Hide the nav-links by default and show the menu toggle button */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
+        border-radius: 10px;
+    }
+
+    /* Show the nav-links when the menu toggle is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Each nav-link item takes full width on mobile */
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Display the menu toggle button */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Adjust logo image size */
+    #logoimage {
+        height: 60px;
+    }
+
+    /* Adjust the signup button for mobile view */
+    .signup-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+/* Toggle Button Animation */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Hero Section */
+.hero-section {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 1600px;
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add padding for larger screens */
+}
+
+.text-content {
+    text-align: left;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.highlight {
+    color: #f47920;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 14px;
+}
+
+.hero-img {
+    max-width: 100%;
+    border-radius: 14px;
+    height: auto;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.hero-section p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.cta-button {
+    background-color: #f47920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #d2671c;
+}
+
+/* Responsive Styles for Tablet */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .text-content {
+        padding: 0;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {.hero-section {
+    text-align: left; /* Align all text to the left */
+}
+
+.hero-content {
+    display: flex; /* Maintain the flex layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+}
+    .hero-section h1 {
+        font-size: 30px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+
+/*clint slider*/
+.clients {
+    margin-top: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    color: white;
+    font-size: 20px;
+}
+
+.clients h1 {
+    color: rgb(17, 16, 16);
+    margin-bottom: 20px;
+}
+
+.client-slider {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap; /* Keep images in a single row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.client-slider::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+.client-slider::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Color of the scrollbar */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.client-slider::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Color on hover */
+}
+
+.client-slider img {
+    margin-left: 50px; /* Space to the left of each image */
+    object-fit: contain;
+    width: 130px; /* Adjust width as needed */
+    height: auto;
+    transition: transform 0.3s ease; /* Scale effect on hover */
+}
+
+.client-slider img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {
+    .client-slider {
+        gap: 15px; /* Reduced gap for mobile */
+    }
+
+    .client-slider img {
+        width: 80px; /* Adjust width for mobile */
+    }
+}
+
+/* Services Section *//* Products and About Us Section */
+.products, .about-us {
+    margin-top: 10px;
+    text-decoration: none;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+}
+
+.products h1 {
+    font-size: 36px; /* Increased heading font size */
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Product Slider */
+.product-slider {
+    overflow-x: hidden; /* Hide the scrollbar */
+    padding: 20px 0; /* Add padding around the slider */
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.product-grid {
+    display: flex; /* Use flexbox to keep items in a single row */
+    gap: 30px; /* Increase space between the cards */
+    padding: 0 20px; /* Add horizontal padding */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.product-grid::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.product-grid {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.product-item {
+    text-decoration: none;
+    background-color: white;
+    padding: 30px; /* Increased padding for more space inside the card */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for depth */
+    transition: transform 0.3s ease;
+    color: black;
+    min-width: 350px; /* Increased minimum width for each item */
+    max-width: 400px; /* Set a maximum width for larger screens */
+    scroll-snap-align: start; /* Align this item when scrolling */
+}
+
+/* Adjust the image styles */
+.product-image {
+    width: 100%; /* Set width to 100% of the parent container */
+    height: 300px; /* Set a fixed height for consistency */
+    border-radius: 5px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 15px; /* Space between the image and text */
+}
+
+.product-item h3 {
+    margin-top: 10px; /* Adjusted margin for better spacing */
+    color: black;
+    font-size: 24px; /* Increased font size for heading */
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    color: black;
+    font-size: 18px; /* Increased font size for description */
+}
+
+.product-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-item a:hover {
+    color: darkblue;
+}
+
+/* Responsive Design */
+.product-button {
+    align-self: center;
+    background-color: #f47920; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 15px; /* Space between the text and button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.product-button:hover {
+    background-color: #d96b16; /* Darker color on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .products, .about-us {
+        padding: 50px 20px; /* Adjusted padding for mobile */
+        font-size: 20px; /* Decreased font size */
+    }
+
+    .products h1 {
+        font-size: 28px; /* Smaller heading size */
+        margin-bottom: 20px; /* Reduced margin */
+    }
+
+    .product-grid {
+        gap: 15px; /* Reduced gap between items */
+        overflow-x: scroll; /* Allow horizontal scrolling */
+    }
+
+    .product-item {
+        min-width: 250px; /* Smaller minimum width for items */
+        padding: 20px; /* Reduced padding */
+        box-shadow: none; /* Remove shadow on mobile */
+    }
+
+    .product-image {
+        height: 200px; /* Smaller image size */
+    }
+
+    .product-item h3 {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .product-item p {
+        font-size: 16px; /* Smaller description size */
+    }
+
+    .product-button {
+        font-size: 14px; /* Smaller button font size */
+        padding: 8px 15px; /* Smaller padding for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-button {
+        padding: 10px 12px; /* Further reduced padding for very small screens */
+    }
+}
+
+
+
+/* Additional styling for sections */
+.solutions {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.testimonials {
+    text-align: left;
+    padding: 30px 0;
+}
+
+.agency {
+    max-width: 1600px;
+    background-color: #f9f9f9;
+    padding: 10px 0; /* Add some padding */
+}
+
+.agency h2 {
+    text-align: center;
+    font-size: 60px; /* Large heading size */
+}
+
+.agency p {
+    margin-top: 30px;
+    font-size: 20px; /* Paragraph font size */
+}
+
+.agency-image {
+    margin-top: 20px;
+    flex: 0 0 50%; /* Width for image */
+}
+
+.agency-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between text and image */
+    max-width: 1200px; /* Set a max width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add padding around the content */
+}
+
+.text-content {
+    flex: 1; /* Allow this section to take available space */
+    padding-right: 20px; /* Add space between text and image */
+}
+
+.image-content {
+    flex: 0 0 40%; /* Fixed width for the image section (adjust as needed) */
+}
+
+.agency-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Optional: Styling for the button */
+.read-more {
+    background-color: #f47920; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button */
+    font-size: 16px; /* Button font size */
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .agency h2 {
+        font-size: 36px; /* Smaller heading size for mobile */
+    }
+
+    .agency p {
+        font-size: 18px; /* Smaller font size for paragraphs */
+    }
+
+    .agency-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center items */
+    }
+
+    .text-content {
+        padding-right: 0; /* Remove right padding */
+        text-align: center; /* Center text content */
+    }
+
+    .image-content {
+        flex: 0 0 100%; /* Full width for image on mobile */
+        margin-top: 20px; /* Space above image */
+    }
+
+    .agency-image {
+        margin: 0 auto; /* Center image */
+    }
+}
+
+@media (max-width: 480px) {
+    .agency h2 {
+        font-size: 28px; /* Further reduce heading size */
+    }
+
+    .agency p {
+        font-size: 16px; /* Further reduce paragraph font size */
+    }
+
+    .read-more {
+        padding: 8px 12px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Smaller font size for the button */
+    }
+}
+
+/*tetrimo*/.testimonials {
+    max-width: 1600px;
+    background-color: #f9f9f9; /* Light background for the testimonials section */
+    padding: 40px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px; /* Default font size for heading */
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 30px; /* Increased gap between cards */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.testimonial {
+    background: #f47920; /* Card background color */
+    color: #fff; /* Text color */
+    padding: 30px; /* Increased padding for more space inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for depth */
+    width: 350px; /* Fixed width for the cards */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.testimonial h4 {
+    color: #fff; /* Name color */
+    margin: 10px 0 5px; /* Margin for the name */
+    font-weight: bold; /* Make the name bold */
+    font-size: 20px; /* Increased font size for the name */
+}
+
+.testimonial span {
+    margin-top: 15px; /* Adjusted margin for spacing */
+    font-size: 16px; /* Increased font size for the title */
+    color: #555; /* Grey color for the title */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 28px; /* Smaller font size for heading */
+    }
+
+    .testimonial-cards {
+        gap: 20px; /* Reduced gap between cards on smaller screens */
+    }
+
+    .testimonial {
+        width: 90%; /* Full width for cards on small screens */
+        margin-bottom: 20px; /* Space below each card */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials h2 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+
+    .testimonial h4 {
+        font-size: 18px; /* Smaller font size for name */
+    }
+
+    .testimonial span {
+        font-size: 14px; /* Smaller font size for title */
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #f47920;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h3 {
+    font-size: 1.5em;
+}
+
+.contact-us {
+    margin-top: 10px;
+    background-color: #f47920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Numbers Section */
+.container1 {
+    background-color: #f47920;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container1 h2 {
+    font-size: 28px; /* Increased heading font size */
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.container1 .numbers {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive layout */
+    justify-content: center; /* Center the items */
+    align-items: center;
+    gap: 100px; /* Space between number boxes */
+    font-size: 70px; /* Increased font size for the numbers */
+    font-weight: 600;
+}
+
+.container1 .numbers .number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 calc(50% - 50px); /* Two numbers in one row for larger screens */
+    max-width: 300px; /* Optional: Set a max width for each column */
+}
+
+.container1 .numbers .number span {
+    font-size: 20px; /* Increased font size for the labels below the numbers */
+    font-weight: 400;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container1 h2 {
+        font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    .container1 .numbers {
+        gap: 50px; /* Reduced space between number boxes */
+        font-size: 50px; /* Smaller font size for numbers */
+    }
+
+    .container1 .numbers .number {
+        flex: 1 1 calc(50% - 20px); /* Adjust for two columns on mobile */
+        margin: 10px 0; /* Add vertical spacing between rows */
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 h2 {
+        font-size: 20px; /* Further reduced heading size */
+    }
+
+    .container1 .numbers {
+        flex-direction: row; /* Ensure the flex direction is row */
+        gap: 20px; /* Space between items */
+    }
+
+    .container1 .numbers .number {
+        flex: 1 1 calc(50% - 20px); /* Two numbers in one row */
+    }
+
+    .container1 .numbers .number span {
+        font-size: 16px; /* Smaller font size for labels */
+    }
+}
+
+
+#scroll-down-arrow {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    bottom: 30px;
+    /* Distance from the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    /* Border for the circle */
+    border-radius: 50%;
+    /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    /* White arrow */
+    background-color: #f47920;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    /* Smooth fade-in and fade-out */
+}
+
+#scroll-down-arrow.show {
+    display: flex;
+    /* Show the arrow when needed */
+    opacity: 1;
+    /* Make visible */
+}
+
+#scroll-down-arrow:hover {
+    border-color: white;
+    color: white;
+    transition: all 0.3s ease;
+    /* Change color on hover */
+}
+
+#scroll-down-arrow span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+    /* Animation for bouncing effect */
+}
+
+/* Bouncing effect for the arrow */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0056b3;
+    /* Deep blue background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-logo-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    border-radius: 14px;
+    height: 150px;
+    width: auto;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    /* Adjust logo size for footer */
+    margin-bottom: 10px;
+}
+
+.footer-bank-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    margin: 20px 0;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*contact us*/
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: white; /* Soft blue background */
+}
+
+.contact-box {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.contact-box h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #f47920; /* Heading color */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields */
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #f47920;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #f47920; /* Highlight input on focus */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing for the textarea */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f47920;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c46c2e; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+/*product data*/
+    /* Center the entire box and set maximum width for readability */
+    #product-detail {
+        max-width: 1600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for subtle 3D effect */
+        border-radius: 10px;
+        text-align: center; /* Center the heading */
+    }
+
+    /* Style the heading */
+    #product-detail h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333333;
+    }
+
+    /* Style the image to fit within the box */
+    #product-detail .product-image {
+        width: 100%; /* Full width within the box */
+        max-height: 300px; /* Set a max height to prevent large images from taking over */
+        object-fit: cover; /* Ensures the image scales without distortion */
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    /* Style for the description text */
+    #product-detail p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555555;
+        text-align: left; /* Left-align description for better readability */
+    }
+
+    /* Bold text in description */
+    #product-detail p strong {
+        font-weight: bold;
+        color: #333333; /* Darker color for emphasis */
+    }
+
+/* Job Postings Section for Horizontal Layout */
+.job-postings {
+    margin-top: 10px;
+    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    
+    flex-wrap: wrap; /* Ensures items wrap to the next row on smaller screens */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.job-container {
+    width: 100%;
+    max-width: 600px; /* Sets a max width to control the box size */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Ensures flexible sizing */
+}
+
+
+.job-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.job-container p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.job-container p strong {
+    color: #f47920;
+}
+
+.job-container form {
+    margin-top: 15px;
+}
+
+.job-container label {
+    display: block;
+    font-weight: bold;
+    color: #f47920;
+    margin-bottom: 5px;
+}
+
+.job-container input[type="file"] {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.job-container button {
+    padding: 10px 20px;
+    background-color: #f47920;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.job-container button:hover {
+    background-color: #555;
+}
+
+
+/*Media Query*/

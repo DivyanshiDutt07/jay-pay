@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="Images/">
+</head>
+
+<body>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+        
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span> <img src="Images/logocdr.png" alt="logoimage" id="logoimage"></span>
+                </div>
+                <a href="new home.html" class="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="new home.html">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="Login.html" class="signup-button">
+                <button class="signup-button">Sign Up</button></a>
+            </nav>
+
+        </div>
+        
+    </header>
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Jay Pay IT Solution Private Limited</strong>, incorporated on June 14, 2021.</p>
+            <p>We are proud to announce that we were recognized as the <strong>Innovative Start-up of the Year</strong> at the Icons of Asia 2023. This prestigious accolade reflects our dedication to delivering cutting-edge solutions and our impact in the financial technology landscape.</p>
+            <p>Under our brand, <strong>Folow Future</strong>, we specialize in innovative software solutions designed to streamline petty cash management. Our commitment to enhancing financial efficiency has made us a trusted partner for businesses seeking to optimize their cash flow processes.</p>
+            <p>At Jay Pay, we pride ourselves on our robust collaboration with over 52 banks and non-banking financial companies (NBFCs), enabling us to offer a comprehensive range of loan products and financial services. Our expertise and dedication to client success drive us to continuously improve our offerings, ensuring that we meet the evolving needs of our clients.</p>
+            <p>Join us on a journey towards smarter financial management as we shape the future of petty cash solutions with many more upcoming projects.</p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <!--
+    <section class="solutions">
+        <div class="container">
+            <h2>Simple Solutions!</h2>
+            <p>We understand that no two businesses are the same...</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+    -->
+
+    <!-- Scroll Down Arrow -->
+    <div id="scroll-down-arrow">
+        <span>&#8595;</span>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        const arrow = document.getElementById('scroll-down-arrow');
+
+        // Function to detect if page has more content to scroll
+        function checkScroll() {
+            const scrolled = window.scrollY;
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Show arrow only when there is scrollable content
+            if (scrolled < scrollableHeight) {
+                arrow.classList.add('show');
+            } else {
+                arrow.classList.remove('show');
+            }
+        }
+
+        // Event listener for scroll events
+        window.addEventListener('scroll', checkScroll);
+
+        // Scroll down when clicking the arrow
+        arrow.addEventListener('click', function () {
+            window.scrollBy({
+                top: 300, // Scroll down by 300px
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo-section">
+            <img src="Images/logocdr.png" alt="Bank Logo" class="footer-logo">
+            <p class="footer-bank-name">JAYPAY IT SOLUTION</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="front.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 JAYPAY IT SOLUTION. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

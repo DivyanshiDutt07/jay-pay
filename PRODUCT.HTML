@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="Images/">
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+
+        .product-detail {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .product-image {
+            max-width: 100%;
+            /* Responsive image */
+            height: auto;
+
+            border-radius: 10px;
+            /* Rounded corners for the image */
+            margin-bottom: 20px;
+            /* Spacing between image and title */
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span> <img src="Images/logocdr.png" alt="logoimage" id="logoimage"></span>
+                </div>
+                <a href="new home.html" class="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="new home.html">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="Login.html" class="signup-button">
+                    <button class="signup-button">Sign Up</button></a>
+            </nav>
+
+        </div>
+
+    </header>
+    <div id="product-detail">
+        <script>
+            const productDetail = document.getElementById('product-detail');
+
+            // Function to get URL parameters
+            const getUrlParameter = (name) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            };
+
+            // Get the product ID from the URL
+            const productId = getUrlParameter('product');
+
+            // Product data (you can also fetch this from a server)
+            const products = {
+                1: {
+                    title: 'Software Solutions',
+                    description: `<br><strong>Software Solutions<br></strong>
+    Welcome to our comprehensive suite of software solutions designed to meet the diverse needs of businesses today. Explore our offerings in ERP, Nidhi software, loan management software, and a variety of other software solutions that enhance operational efficiency and drive growth.
+    <br><strong>
+    ERP (Enterprise Resource Planning) Software
+    Streamline Your Business Operations
+    <br></strong>
+    Our ERP software integrates key business processes into a single, cohesive system. Designed for organizations looking to unify their operations, our ERP solutions provide:
+    <br><strong>
+    Integration:<br></strong> Combine finance, HR, supply chain, and customer relationship management into one platform.<br><strong>
+    Real-time Data:<br></strong> Access a single source of truth for informed decision-making.<br><strong>
+    Automation:<br></strong> Reduce manual tasks and minimize errors through process automation.<br><strong>
+    Scalability:<br></strong> Adapt to your growing business needs with ease.<br><strong>
+    Benefits:<br></strong>
+
+    Enhance efficiency and productivity across all departments.
+    Improve reporting and analytics capabilities for better insights.
+    Streamline compliance and risk management.
+    Foster improved communication and collaboration within your organization.<br><strong>
+    Nidhi Software<br></strong>
+    Empowering Nidhi Companies<br></strong>
+
+    Our Nidhi software is specifically tailored for Nidhi companies, facilitating seamless member interactions in the borrowing and lending process. Key features include:
+    <br><strong>
+    Member Management:<br></strong> Efficiently handle member registrations and transactions.<br><strong>
+    Loan Management:<br></strong> Streamline the loan application and disbursement processes.<br><strong>
+    Compliance Tracking:<br></strong> Ensure adherence to Reserve Bank of India (RBI) regulations.<br><strong>
+    Accounting and Reporting:<br></strong> Automate financial reporting for transparency and accountability.<br><strong>
+    Benefits:<br></strong>
+
+    Simplify transactions and elevate member service.
+    Reduce administrative tasks with automated processes.
+    Maintain compliance with financial regulations.
+    Gain valuable insights into member behavior and financial performance.<br><strong>
+    Loan Management Software
+    Optimizing the Loan Lifecycle<br></strong>
+
+    Our loan management software is designed to manage every aspect of the loan lifecycle, ensuring efficiency for financial institutions. Key features include:
+    <br><strong>
+    Application Processing:<br></strong> Facilitate online loan applications with document uploads.<br><strong>
+    Risk Assessment:<br></strong> Evaluate borrower creditworthiness using advanced data analytics.<br><strong>
+    Servicing and Collections: <br></strong>Automate payment processing and collection efforts.<br><strong>
+    Reporting and Analytics:<br></strong> Generate comprehensive reports on loan performance.<br><strong>
+    Benefits:<br></strong>
+
+    Increase efficiency in loan processing and servicing.
+    Enhance risk management and regulatory compliance.
+    Improve customer experience through streamlined services.
+    Gain greater visibility into loan portfolios and performance metrics.<br><strong>
+    Comprehensive Software Solutions
+    Diverse Offerings for Every Business Need<br></strong>
+
+    In addition to ERP, Nidhi, and loan management software, we provide a wide range of software solutions tailored to various industries, including:
+    <br><strong>
+    Custom Software Development: <br></strong>Create tailored solutions to meet unique business challenges.<br><strong>
+    SaaS (Software as a Service):<br></strong> Cloud-based applications for flexibility and scalability.<br><strong>
+    Mobile Applications:<br></strong> Enhance accessibility with mobile-friendly software.<br><strong>
+    E-commerce Platforms:<br></strong> Solutions designed for online retail and payment processing.<br><strong>
+    Business Intelligence Tools: <br></strong>Powerful data analysis and reporting tools to drive informed decisions.`,
+                    image: 'https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg' // Add image path
+                },
+                2: {
+                    title: 'SAFETY QR TAG Solutions',
+                    description: `<strong>Safety QR:<br> Protecting Lives, Offering Peace of Mind</strong>
+In a world full of uncertainties, Safety QR is your trusted companion for staying connected and informed during emergencies. Whether it's a vehicle parked in the wrong place, a road accident, theft, or even an altercation, Safety QR is designed to safeguard not only your vehicle but also the lives of those you care about.
+
+Use Cases of Safety QR: A Solution for Every Situation<br>
+<strong>
+Accidents:<br></strong>
+In the event of an accident, seconds can make a difference between life and death. If your vehicle is involved, anyone nearby can scan the Safety QR code and immediately notify your emergency contacts. Your family or loved ones will be alerted instantly, allowing them to act swiftly.
+<strong><br>
+Wrong Parking:<br></strong>
+We've all experienced the inconvenience of finding a vehicle blocking our way. With Safety QR, others can simply scan the code on your vehicle to send a message directly to you, without needing to exchange personal contact information. It’s a discreet and respectful way to manage parking issues, saving time and frustration.
+<strong><br>
+Theft Alerts:<br></strong>
+In case someone notices suspicious activity around your vehicle, they can easily scan the Safety QR code to alert you about the potential theft. Immediate notifications give you the chance to act quickly—whether by contacting local authorities or ensuring the safety of your vehicle.
+<br><strong>
+Public Fights or Emergencies:<br></strong>
+If an altercation breaks out near your vehicle, or if someone nearby is involved in a medical emergency, the Safety QR code provides a quick way to notify family members or others in your emergency contact list. This ensures a fast and reliable response, giving you peace of mind that help can be on the way.
+<br><strong>
+Benefits of Safety QR: More Than Just a Code, It’s a Lifeline<br></strong>
+<strong>
+1. Immediate Communication in Emergencies:<br></strong>
+Accidents, emergencies, and unexpected events can strike at any moment. By using Safety QR, you create a direct line of communication to your loved ones when it matters most. Without the need for special apps or shared phone numbers, strangers can help notify those closest to you, ensuring rapid action when it's needed.
+<br><strong>
+2. Peace of Mind for Loved Ones:<br></strong>
+Imagine the relief of knowing that if something happens to your vehicle or you’re involved in an emergency, your family will be the first to know. Safety QR eliminates the helplessness of uncertainty. Your loved ones can be informed even if you are unable to make the call yourself. This system is not just about vehicles; it’s about reassuring those who care about you that they’ll be kept in the loop, no matter what.
+<br><strong>
+3. A Discreet Solution for Modern Life:<br></strong>
+In many situations, communicating directly with someone may feel uncomfortable or risky—especially when it comes to privacy. Safety QR offers a seamless way for people to connect with you in case of issues like wrong parking, without revealing personal contact information. This ensures both parties feel secure and respected, helping avoid unnecessary tension.
+<br><strong>
+4. Saves Time in Critical Moments:<br></strong>
+Emergencies often leave people scrambling to find contact information or ways to help. Safety QR eliminates these delays by making the necessary tools readily available with just a quick scan. By simplifying the process, we help save valuable time in situations where every second counts—whether it’s an accident or a potential theft.
+<strong>
+5. A Privacy-First Approach:<br></strong>
+Your privacy and security are paramount. Safety QR ensures that your personal details—such as phone numbers—are never directly shared with anyone scanning the code. The system provides controlled communication channels, making sure you stay safe while staying informed.
+<br><strong>
+FAMILY Benefits:<br> Keeping Families Close, No Matter the Distance<br></strong>
+Strengthens Emotional Security:<br></strong>
+Knowing that your family can be alerted in case of an emergency offers an emotional layer of security. Your loved ones are always just one scan away from knowing your situation, providing peace of mind whether you're far from home or close by.<br>
+<strong>
+Eases the Burden of Worry:<br></strong>
+Whether you’re a parent concerned about your child driving alone or someone who often parks in busy urban areas, Safety QR allows your family and friends to breathe easier. It eliminates the lingering worry of "what if something happens," because they know they’ll be informed right away.<br>
+<strong>
+Keeps You Connected During Crisis:<br></strong>
+In high-stress moments—whether due to an accident or a parking dispute—it's easy to feel isolated. Safety QR bridges that gap, ensuring your support network can step in swiftly to provide assistance, comfort, or necessary action.
+<br><strong>
+Life-Saving Potential: Because Every Second Matters<br></strong>
+Safety QR is designed to save lives in critical situations. In the event of an accident, a passerby doesn't need to know your emergency contacts or use a special app—they can simply scan the code and get your family involved immediately. By removing barriers to communication, we make sure that help is always just a scan away.
+<br><strong>
+Imagine the Difference:<br></strong>
+
+A driver loses control of their vehicle, leading to an accident. With Safety QR, the first person on the scene can scan the code, instantly notifying the driver’s family. The family can act quickly—whether calling emergency services or rushing to the scene.<br>
+A theft is noticed, and before the situation escalates, someone can alert you in real-time, potentially preventing the theft.<br>
+<strong>
+Why Choose Safety QR?<br></strong>
+<strong>
+No Special App Required:</strong> Anyone with a smartphone can use Safety QR to reach out for help.<br>
+<strong>
+Quick and Easy Access: </strong>The QR code is instantly scannable, ensuring that there’s no delay in communication.
+<strong><br>
+Privacy Protected:</strong><br> Your contact details are never exposed, giving you full control over how and when others can contact you.
+Safety QR isn't just a tool for emergencies—it's a way to safeguard what matters most: your loved ones, your peace of mind, and your life. Be prepared for the unexpected and stay connected in critical moments.
+<br><strong>
+Safety QR: Because every life matters.</strong>
+<br>
+This detailed description emphasizes both practical and emotional benefits, highlighting the system's life-saving potential and reassuring users that their families will be protected in any situation.`,
+                    image: 'https://cdn.pixabay.com/photo/2016/12/13/07/26/qr-code-1903447_1280.jpg' // Add image path
+                },
+                3: {
+                    title: 'Petty Cash Management',
+                    description: `<br><strong>Petty Cash Management Solution for Businesses:<br></strong> Empowering Owners with Real-Time Control
+Managing petty cash in businesses such as logistics, healthcare, agriculture, and more can be complex and time-consuming. Traditional methods often result in inefficiencies, lack of visibility, and delayed reconciliations. Our Petty Cash Management Solution offers a smart, seamless way to manage and monitor petty cash expenses, ensuring full control over company funds. This solution is particularly beneficial for handling driver expenses, salaries, advances, and other small but essential transactions.<br>
+<br><strong>
+Key Benefits and Uses of the Petty Cash Management Solution<br></strong><strong>
+1. Real-Time Cash Flow Visibility<br></strong>
+With our solution, business owners have complete visibility into cash flow in real time. Whether it's tracking driver expenses in a logistics company, managing advances for employees in agriculture, or controlling daily hospital expenses, owners can monitor every transaction as it happens. This feature ensures transparency and eliminates the risk of unauthorized expenses.<br>
+<br><strong>
+2. Instant Loading of Prepaid Cards<br></strong>
+No more delays or manual processes—cash can be instantly loaded onto prepaid cards for drivers or employees. This ensures they have immediate access to funds for fuel, tolls, or other work-related expenses, without needing to wait for approvals or cash reimbursements. In industries like logistics, where drivers need quick access to funds on the road, this feature is invaluable.<br><strong>
+
+3. Flexible for Multiple Industries<br></strong>
+Our petty cash management system is adaptable to a wide range of industries:<br><strong>
+
+Logistics: <br></strong>Manage driver salaries, fuel advances, toll payments, and other expenses while tracking cash usage remotely.<br><strong>
+Hospitals: <br></strong>Handle emergency purchases, equipment maintenance costs, and staff advances with ease.<br><strong>
+Agriculture:<br></strong> Track daily worker payments, machinery maintenance, and supply costs with full control over expenses.<br><strong>
+Schools:<br></strong> Manage staff salaries, maintenance costs, and other operational expenses without hassle.<br><strong>
+Contractors: <br></strong>Streamline labor payments, equipment purchases, and on-site expenses with instant cash disbursement and tracking.<br><strong>
+<br>4. Advanced Security and Instant Card Control</strong>
+In case a prepaid card is lost or misplaced, the owner can immediately take control without the need for OTPs or complex verification steps. With just a few clicks, the owner can block the card, preventing any misuse, and even withdraw funds in real time from the card balance, ensuring no loss of company money.
+<br><strong>
+5. All Powers in the Hands of the Owner<br></strong>
+The solution provides full control to the business owner:
+<br><strong>
+Track and Approve Expenses:<br></strong> Owners can monitor expenses as they happen, approve or reject transactions, and keep track of every penny spent.<br><strong>
+Load Funds Anytime, Anywhere: <br></strong>Cash can be instantly transferred to prepaid cards whenever needed, ensuring there are no interruptions in business operations.<br><strong>
+Real-Time Expense Reporting:<br></strong> Business owners get immediate reports of all transactions, making it easier to reconcile accounts and make informed decisions quickly.<br>
+<br><strong>6. Efficient Payroll and Advance Management<br></strong>
+Managing salaries, advances, and other payments becomes a breeze. With the ability to load salaries onto prepaid cards instantly, employees can access their wages without waiting for traditional bank processing times. This is especially useful for industries with temporary or contract workers, such as agriculture, logistics, and construction, where workers may need instant access to wages or advances.<br>
+<br><strong>
+7. Reduced Administrative Burden<br></strong>
+Manual petty cash management can be time-consuming and prone to errors. By automating petty cash distribution and expense tracking, businesses can significantly reduce the administrative burden on staff. This frees up time for other important tasks, while also ensuring greater accuracy in financial management.<br>
+<br><strong>
+8. Enhanced Transparency and Accountability<br></strong>
+Every transaction is recorded and traceable, providing a clear audit trail. This enhances accountability for employees, reducing the likelihood of fraud or misuse of company funds. With the ability to see who spent what, where, and when, business owners can maintain tight control over petty cash.<br>
+<br><strong>
+Real-World Use Cases<br></strong>
+<br><strong>Logistics Companies:<br></strong> Drivers on the road can use prepaid cards for fuel, tolls, and repairs. If an issue arises or the card is lost, the owner can take control instantly, ensuring no misuse and keeping operations running smoothly.<br>
+<br><strong>
+Agricultural Businesses:<br></strong> Farmers and contractors can instantly provide cash for labor wages, equipment repairs, and supply purchases, ensuring timely payments during harvests or planting seasons.<br>
+<br><strong>
+Hospitals: <br></strong>Administrators can quickly disburse funds for emergency purchases of medical equipment or supplies. In case of lost cards, owners can block access immediately and track expenses in real time, ensuring that resources are used efficiently.<br>
+<br><strong>
+Schools: <br></strong>School administrators can manage maintenance expenses, staff salaries, and minor operational costs without having to deal with the hassle of manual cash handling.
+<br><strong>
+Contractors:<br></strong> Construction managers can pay on-site workers or purchase materials quickly and efficiently, using prepaid cards to control and track petty cash spending.
+<br><strong>
+Why Choose Our Petty Cash Management Solution?<br></strong>
+<br><strong>Real-Time Control: <br></strong>Immediate cash access and reporting keep you informed and in control.<br>
+<br><strong>Instant Fund Loading:<br></strong> Load money onto prepaid cards instantly for quick access by employees.<br>
+<br><strong>Advanced Security:<br></strong> Block lost cards and withdraw remaining funds instantly, without needing OTPs or external verification.<br>
+<br><strong>Multi-Industry Flexibility:<br></strong> From logistics to hospitals, agriculture to contractors—our solution adapts to your business.<br>
+<br><strong>Improved Accountability:<br></strong> Real-time tracking and reporting ensure transparency and accountability, reducing the risk of fraud or unauthorized spending.<br>
+Our Petty Cash Management Solution empowers business owners to handle daily expenses with ease, ensuring full control over cash flow, improved efficiency, and enhanced security. Whether you’re managing drivers on the road, agricultural workers in the field, or healthcare staff in a busy hospital, this solution helps you streamline petty cash management, reduce risks, and stay on top of your finances—giving you the power to manage your business with confidence.`,
+                    image: 'https://cdn.pixabay.com/photo/2016/12/06/04/26/cash-register-1885558_1280.jpg' // Add image path
+                },
+                4: {
+                    title: 'Loan Solutions',
+                    description: `<br><strong>Loan Solutions Tailored to Your Needs<br></strong>
+At Folow Future, we connect you with trusted financial institutions to provide a wide range of loan solutions that cater to your personal and business needs. Whether you're looking to fulfill personal goals, expand your business, or purchase your dream home or car, our loan solutions are designed to make your financial journey smooth and hassle-free. Explore our diverse offerings:
+<br><strong>
+Personal Loan<br></strong>
+Sometimes, life presents opportunities or challenges that require extra financial support. Whether it’s for medical expenses, weddings, vacations, or debt consolidation, our Personal Loan solutions offer flexible amounts with convenient repayment options. These loans come without the need for collateral, giving you quick access to funds to meet your immediate needs.
+<br><strong>
+Benefits:
+<br></strong>
+No collateral required
+Flexible tenure options
+Quick approval and disbursal process
+Business Loan
+Grow your business with our Business Loan solutions, designed for entrepreneurs and business owners looking to expand operations, purchase new equipment, or manage working capital. We connect you with financial partners who offer loans tailored to your business size, stage, and industry.
+<br><strong>
+Benefits:
+<br></strong>
+Competitive interest rates
+Customizable loan amounts
+Flexible repayment terms
+Suitable for start-ups and established businesses
+Property Loan
+Unlock the value of your property with a Property Loan. Whether you're planning to invest in new real estate or leverage your existing property for financial needs, these loans offer the flexibility to utilize your assets to secure favorable terms. Use it for personal or business purposes with ease.
+<br><strong>
+Benefits:
+<br></strong>
+Attractive interest rates
+Longer tenure options
+High loan-to-value ratio
+Flexibility to use funds for various needs
+Home Loan
+Buying your dream home is a significant milestone, and our Home Loan solutions help turn that dream into a reality. With options for first-time buyers and property investors alike, we connect you with leading financial institutions offering competitive rates and long-term tenures to make homeownership more accessible.
+<br><strong>
+Benefits:
+<br></strong>
+Low-interest rates
+Longer repayment tenures
+Tax benefits under government schemes
+Loans available for new homes, renovations, or plot purchases
+Fresh Car Loan
+Drive your dream car home with our Fresh Car Loan solutions. Whether it’s your first car or an upgrade to a luxury model, we ensure a hassle-free process from start to finish. Get connected with financial partners who provide fast approval and flexible financing for new car purchases.
+<br><strong>
+Benefits:
+<br></strong>
+Low down payments
+Flexible EMI options
+Quick approval process
+Financing available for all car models and brands
+<br><strong>
+Education Loan<br></strong>
+Invest in your future with our Education Loan solutions, designed to help students achieve their academic dreams without financial stress. Whether you're pursuing higher education in India or abroad, we connect you with financial institutions that offer flexible and affordable loan options to cover tuition fees, living expenses, and other related costs.
+<br><strong>
+Benefits:
+<br></strong>
+Competitive interest rates
+Flexible repayment terms with options to start repayment after course completion
+Loans available for both domestic and international studies
+Coverage for tuition, living expenses, travel, and more
+
+At Folow Future, we simplify the loan process by acting as a facilitator between you and top financial institutions, offering you transparency, flexibility, and peace of mind. Take the first step toward achieving your financial goals with our loan solutions!`,
+                    image: 'https://cdn.pixabay.com/photo/2021/10/07/15/24/home-ownership-6688954_1280.jpg' // Add image path
+                },
+                5: {
+                    title: 'Investment Solutions',
+                    description: `<br><strong>Investment Solutions:<br></strong> Grow Your Wealth with Fixed and Recurring Deposits
+At Folow Future, we help you secure your financial future by connecting you with trusted financial institutions offering reliable and profitable investment options. Whether you're looking for safe, long-term savings or a disciplined way to build your wealth over time, our Fixed Deposit and Recurring Deposit solutions are designed to provide you with stable returns and peace of mind.
+<br><strong>
+Fixed Deposit (FD)<br></strong>
+Looking for a low-risk investment with guaranteed returns? Our Fixed Deposit (FD) solutions offer a secure way to grow your savings over a fixed period. With flexible tenure options and attractive interest rates, your money works harder for you without the volatility of market-linked investments. Enjoy returns up to 10% on select FDs, giving you a significant boost to your savings.
+<br><strong>
+Benefits:
+<br></strong>
+Guaranteed returns with no risk
+High interest rates, up to 10%
+Flexible tenure options to suit your financial goals
+Option to receive interest payouts monthly, quarterly, or at maturity
+Tax-saving benefits under certain FD schemes<br><strong>
+Recurring Deposit (RD)<br></strong>
+If you prefer disciplined, regular savings, our Recurring Deposit (RD) solutions are perfect for you. With an RD, you can deposit a fixed amount every month and earn interest over a pre-determined period. This option is ideal for those who wish to build a large corpus over time, while enjoying the security of a fixed interest rate.
+<br><strong>
+Benefits:
+<br></strong>
+Flexible monthly deposits
+Guaranteed returns with a fixed interest rate
+Ideal for long-term savings goals
+Choice of tenure ranging from 6 months to 10 years
+Easy to set up with automatic deductions from your account<br><strong>
+Fixed Deposit at 10%<br></strong>
+Our special Fixed Deposit at 10% interest is designed to maximize your returns over a fixed tenure, offering one of the highest interest rates available in the market. This FD option ensures that your money grows significantly faster, making it an ideal choice for those looking to grow their savings safely and securely.
+<br><strong>
+Benefits:
+<br></strong>
+Earn a high 10% interest rate on your investment
+Ideal for long-term savings or wealth accumulation
+Guaranteed and stable returns with no market risk
+Flexible withdrawal options at the end of tenure
+Folow Future connects you with leading financial institutions that provide secure, high-return investment solutions. Whether you're aiming for short-term gains or long-term financial stability, our Fixed Deposit and Recurring Deposit options ensure that your savings grow steadily and safely. Invest today and watch your wealth multiply!`,
+                    image: 'https://cdn.pixabay.com/photo/2019/10/01/14/18/money-back-up-4518407_1280.jpg' // Add image path
+                },
+            };
+
+            // Display the product information
+            if (productId in products) {
+                const product = products[productId];
+                productDetail.innerHTML = `
+                <img src="${product.image}" alt="${product.title} Image" class="product-image">
+                <h1>${product.title}</h1>
+                <p>${product.description}</p>
+            `;
+            } else {
+                productDetail.innerHTML = '<h1>Product not found</h1>';
+            }
+        </script>
+        </div>
+        <!--more-->
+        <section class="products">
+            <h1>Our Products</h1>
+            <div class="product-slider">
+                <div class="product-grid">
+                    <div class="product-item" data-product="1">
+                        <a href="product.html?product=1">
+                            <img src="Images/software solution.jpeg" alt="Software Solutions Image"
+                                class="product-image">
+                            <h3>Software Solutions</h3>
+                            <p>Streamline your business operations with our customized software solutions designed
+                                to enhance efficiency and performance.</p>
+                            <button class="product-button">Learn More</button> <!-- Added button -->
+                        </a>
+                    </div>
+                    <div class="product-item" data-product="2">
+                        <a href="product.html?product=2">
+                            <img src="Images/safetyqr.jpg" alt="Safety QR Tag Solutions" class="product-image">
+                            <h3>SAFETY QR TAG Solutions</h3>
+                            <p>Ensure safety and security with our QR tag solutions tailored for societies and
+                                individuals.</p>
+                            <button class="product-button">Learn More</button> <!-- Added button -->
+                        </a>
+                    </div>
+                    <div class="product-item" data-product="3">
+                        <a href="product.html?product=3">
+                            <img src="Images/cash managment.jpeg" alt="Petty Cash Management" class="product-image">
+                            <h3>Petty Cash Management</h3>
+                            <p>Manage your petty cash flow seamlessly with our ATM card solutions.</p>
+                            <button class="product-button">Learn More</button> <!-- Added button -->
+                        </a>
+                    </div>
+                    <div class="product-item" data-product="4">
+                        <a href="product.html?product=4">
+                            <img src="Images/loan solution.jpeg" alt="Loan Solutions" class="product-image">
+                            <h3>Loan Solutions</h3>
+                            <p>Comprehensive loan services including Personal, Business, Property, and Home Loans,
+                                as well as Car and Vehicle Loans.</p>
+                            <button class="product-button">Learn More</button> <!-- Added button -->
+                        </a>
+                    </div>
+                    <div class="product-item" data-product="5">
+                        <a href="product.html?product=5">
+                            <img src="Images/investmentsol.jpg" alt="Investment Solutions" class="product-image">
+                            <h3>Investment Solutions</h3>
+                            <p>Explore Fixed Deposit and Recurring Deposit options to grow your wealth.</p>
+                            <button class="product-button">Learn More</button> <!-- Added button -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const productItems = document.querySelectorAll('.product-item');
+                productItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const productId = item.getAttribute('data-product');
+                        window.location.href = `product.html?product=${productId}`;
+                    });
+                });
+            </script>
+        </section>
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-logo-section">
+                <img src="Images/logocdr.png" alt="Bank Logo" class="footer-logo">
+                <p class="footer-bank-name">JAYPAY IT SOLUTION</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="front.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="products.html">Services</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bank Name. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+
+</html>

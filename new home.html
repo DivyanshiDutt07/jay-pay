@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="Images/">
+    
+
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+        
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span> <img src="Images/logocdr.png" alt="logoimage" id="logoimage"></span>
+                </div>
+                <a href="new home.html" class="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="new home.html">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="Login.html" class="signup-button">
+                <button class="signup-button">Sign Up</button></a>
+            </nav>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="text-content">
+                        <h1>We create <br><span class="highlight">solutions</span> for<br> your business</h1>
+                        <p>Our team keeps a keen eye on emerging trends <br>and innovations to secure your marketing
+                            campaigns remain cutting-edge.</p>
+                       <a href="services.html">
+                        <button class="cta-button">Get Started</button> </a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="Images/girl-image.jpg" alt="Hero Image" class="hero-img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </header>
+   
+    <section class="clients">
+        <h1>52+ Banking Partners</h1>
+        <div class="client-slider">
+            <img src="Images/aditya img.png" alt="Client 1" class="client-slider1">
+            <img src="Images/bob img.png" alt="Client 2" class="client-slider2">
+            <img src="Images/boi img.png" alt="Client 3" class="client-slider3">
+            <img src="Images/hdfclogo.jpeg" alt="Client 4" class="client-slider4">
+            <img src="Images/icici img.png" alt="Client 5" class="client-slider5">
+            <img src="Images/piramal img.png" alt="Client 6" class="client-slider6">
+            <img src="Images/chola img.png" alt="Client 7" class="client-slider7">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+<section class="products">
+    <h1>Our Products</h1>
+    <div class="product-slider">
+        <div class="product-grid">
+            <div class="product-item" data-product="1">
+                <a href="product.html?product=1">
+                    <img src="Images/software solution.jpeg" alt="Software Solutions Image" class="product-image">
+                    <h3>Software Solutions</h3>
+                    <p>Streamline your business operations with our customized software solutions designed to enhance efficiency and performance.</p>
+                    <button class="product-button">Learn More</button> <!-- Added button -->
+                </a>
+            </div>
+            <div class="product-item" data-product="2">
+                <a href="product.html?product=2">
+                    <img src="Images/safetyqr.jpg" alt="Safety QR Tag Solutions" class="product-image">
+                    <h3>SAFETY QR TAG Solutions</h3>
+                    <p>Ensure safety and security with our QR tag solutions tailored for societies and individuals.</p>
+                    <button class="product-button">Learn More</button> <!-- Added button -->
+                </a>
+            </div>
+            <div class="product-item" data-product="3">
+                <a href="product.html?product=3">
+                    <img src="Images/cash managment.jpeg" alt="Petty Cash Management" class="product-image">
+                    <h3>Petty Cash Management</h3>
+                    <p>Manage your petty cash flow seamlessly with our ATM card solutions.</p>
+                    <button class="product-button">Learn More</button> <!-- Added button -->
+                </a>
+            </div>
+            <div class="product-item" data-product="4">
+                <a href="product.html?product=4">
+                    <img src="Images/loan solution.jpeg" alt="Loan Solutions" class="product-image">
+                    <h3>Loan Solutions</h3>
+                    <p>Comprehensive loan services including Personal, Business, Property, and Home Loans, as well as Car and Vehicle Loans.</p>
+                    <button class="product-button">Learn More</button> <!-- Added button -->
+                </a>
+            </div>
+            <div class="product-item" data-product="5">
+                <a href="product.html?product=5">
+                    <img src="Images/investmentsol.jpg" alt="Investment Solutions" class="product-image">
+                    <h3>Investment Solutions</h3>
+                    <p>Explore Fixed Deposit and Recurring Deposit options to grow your wealth.</p>
+                    <button class="product-button">Learn More</button> <!-- Added button -->
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const productItems = document.querySelectorAll('.product-item');
+        productItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const productId = item.getAttribute('data-product');
+                window.location.href = `product.html?product=${productId}`;
+            });
+        });
+    </script>
+</section>
+
+    <!--numbers-->
+    <div class="container1">
+        <h2>Unlocking Global Horizons: Crafting Journeys, Building Futures.</h2>
+        <div class="numbers">
+            <div class="number">
+                <span>15</span>
+                <span>Years of Experience</span>
+            </div>
+            <div class="number">
+                <span>12</span>
+                <span>Qualified Experts</span>
+            </div>
+            <div class="number">
+                <span>120</span>
+                <span>Clients Every Year</span>
+            </div>
+            <div class="number">
+                <span>9</span>
+                <span>Intl. Partners</span>
+            </div>
+        </div>
+    </div>
+    <!-- Solutions Section -->
+    <!--<section class="solutions">
+        <div class="container">
+            <h2>Simple Solutions!</h2>
+            <p>We understand that no two businesses are the same...</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+    --!>
+    <!-- Agency Section -->
+    <section class="agency">
+        <div class="container">
+            <h2>Our Agency</h2>
+            <div class="agency-content">
+                <div class="text-content">
+                    <p>We believe in the power of data...
+                        Welcome to <strong>Jay Pay IT Solution Private Limited</strong>, incorporated on June 14,
+                        2021.<br><br>
+
+                        We are proud to announce that we were recognized as the Innovative Start-up of the Year at the
+                        Icons of Asia 2023. This prestigious accolade reflects our dedication to delivering cutting-edge
+                        solutions and our impact in the financial technology landscape.<br><br>
+                        <br>
+                    </p>
+                    <a href="about_us.html">
+                    <button class="read-more">Read more</button></a>
+                </div>
+                <div class="image-content">
+                    <img src="Images/girl-image.jpg" alt="Agency Image" class="agency-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container ">
+            <h2>What Clients Say!</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial">
+                    <p>"Working with this team has been a game-changer for our business. Their attention to detail and
+                        commitment to quality are unmatched!"</p>
+                    <h4>- Sarah Johnson</h4>
+                    <span>CEO, Tech Innovators</span>
+                </div>
+                <div class="testimonial">
+                    <p>"I was thoroughly impressed by their professionalism and creativity. They took our ideas and
+                        turned them into reality!"</p>
+                    <h4>- Michael Smith</h4>
+                    <span>Marketing Director, Creative Solutions</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Their expertise in the industry helped us achieve our goals faster than we expected. I highly
+                        recommend their services!"</p>
+                    <h4>- Emily Davis</h4>
+                    <span>Founder, StartUp Hub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll Down Arrow -->
+    <div id="scroll-down-arrow">
+        <span>&#8595;</span>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        const arrow = document.getElementById('scroll-down-arrow');
+
+        // Function to detect if page has more content to scroll
+        function checkScroll() {
+            const scrolled = window.scrollY;
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Show arrow only when there is scrollable content
+            if (scrolled < scrollableHeight) {
+                arrow.classList.add('show');
+            } else {
+                arrow.classList.remove('show');
+            }
+        }
+
+        // Event listener for scroll events
+        window.addEventListener('scroll', checkScroll);
+
+        // Scroll down when clicking the arrow
+        arrow.addEventListener('click', function () {
+            window.scrollBy({
+                top: 300, // Scroll down by 300px
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo-section">
+            <img src="Images/logocdr.png" alt="Bank Logo" id="logoimage">
+            <p class="footer-bank-name">JAYPAY IT SOLUTION</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="front.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bank Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

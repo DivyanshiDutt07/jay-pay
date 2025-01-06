@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
+</head>
+
+<body>
+  
+
+    <!-- Header Section -->
+    <header>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.getElementById('mobile-menu');
+                const navLinks = document.querySelector('.nav-links');
+    
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+            });
+        </script>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span> <img src="Images/logocdr.png" alt="logoimage" id="logoimage"></span>
+                </div>
+                <a href="new home.html" class="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="new home.html">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="Login.html" class="signup-button">
+                    <button class="signup-button">Sign Up</button></a>
+            </nav>
+        </div>
+    </header>
+    <!-- Services Section -->
+    <section class="products">
+        <h1>Our Products</h1>
+        <div class="product-slider">
+            <div class="product-grid">
+                <div class="product-item" data-product="1">
+                    <a href="product.html?product=1">
+                        <img src="Images/software solution.jpeg" alt="Software Solutions Image" class="product-image">
+                        <h3>Software Solutions</h3>
+                        <p>Streamline your business operations with our customized software solutions designed to
+                            enhance efficiency and performance.</p>
+                        <button class="product-button">Learn More</button> <!-- Added button -->
+                    </a>
+                </div>
+                <div class="product-item" data-product="2">
+                    <a href="product.html?product=2">
+                        <img src="Images/safetyqr.jpg" alt="Safety QR Tag Solutions" class="product-image">
+                        <h3>SAFETY QR TAG Solutions</h3>
+                        <p>Ensure safety and security with our QR tag solutions tailored for societies and individuals.
+                        </p>
+                        <button class="product-button">Learn More</button> <!-- Added button -->
+                    </a>
+                </div>
+                <div class="product-item" data-product="3">
+                    <a href="product.html?product=3">
+                        <img src="Images/cash managment.jpeg" alt="Petty Cash Management" class="product-image">
+                        <h3>Petty Cash Management</h3>
+                        <p>Manage your petty cash flow seamlessly with our ATM card solutions.</p>
+                        <button class="product-button">Learn More</button> <!-- Added button -->
+                    </a>
+                </div>
+                <div class="product-item" data-product="4">
+                    <a href="product.html?product=4">
+                        <img src="Images/loan solution.jpeg" alt="Loan Solutions" class="product-image">
+                        <h3>Loan Solutions</h3>
+                        <p>Comprehensive loan services including Personal, Business, Property, and Home Loans, as well
+                            as Car and Vehicle Loans.</p>
+                        <button class="product-button">Learn More</button> <!-- Added button -->
+                    </a>
+                </div>
+                <div class="product-item" data-product="5">
+                    <a href="product.html?product=5">
+                        <img src="Images/investmentsol.jpg" alt="Investment Solutions" class="product-image">
+                        <h3>Investment Solutions</h3>
+                        <p>Explore Fixed Deposit and Recurring Deposit options to grow your wealth.</p>
+                        <button class="product-button">Learn More</button> <!-- Added button -->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const productId = item.getAttribute('data-product');
+                    window.location.href = `product.html?product=${productId}`;
+                });
+            });
+        </script>
+    </section>
+
+
+
+
+    <!-- Scroll Down Arrow -->
+    <div id="scroll-down-arrow">
+        <span>&#8595;</span>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        const arrow = document.getElementById('scroll-down-arrow');
+
+        // Function to detect if page has more content to scroll
+        function checkScroll() {
+            const scrolled = window.scrollY;
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Show arrow only when there is scrollable content
+            if (scrolled < scrollableHeight) {
+                arrow.classList.add('show');
+            } else {
+                arrow.classList.remove('show');
+            }
+        }
+
+        // Event listener for scroll events
+        window.addEventListener('scroll', checkScroll);
+
+        // Scroll down when clicking the arrow
+        arrow.addEventListener('click', function () {
+            window.scrollBy({
+                top: 300, // Scroll down by 300px
+                behavior: 'smooth' // Smooth scroll behavior
+            });
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo-section">
+            <img src="Images/logocdr.png" alt="Bank Logo" class="footer-logo">
+            <p class="footer-bank-name">JAYPAY IT SOLUTION</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="front.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Services</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 JAYPAY IT SOLUTION. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
